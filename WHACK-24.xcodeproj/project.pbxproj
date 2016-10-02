@@ -14,6 +14,9 @@
 		BC9510E41DA01D0600C9CA21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9510E21DA01D0600C9CA21 /* LaunchScreen.storyboard */; };
 		BC9510EF1DA01D0600C9CA21 /* WHACK_24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510EE1DA01D0600C9CA21 /* WHACK_24Tests.swift */; };
 		BC9510FA1DA01D0600C9CA21 /* WHACK_24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9510F91DA01D0600C9CA21 /* WHACK_24UITests.swift */; };
+		BC9511081DA020EC00C9CA21 /* OpeningScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9511071DA020EC00C9CA21 /* OpeningScreenViewController.swift */; };
+		BC95110E1DA0656F00C9CA21 /* beaconDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95110D1DA0656F00C9CA21 /* beaconDict.swift */; };
+		BCB5075A1DA142F9002B2555 /* screen_shot_2016-10-01_at_5.35.28_pm_480.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB507591DA142F9002B2555 /* screen_shot_2016-10-01_at_5.35.28_pm_480.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BC9510F51DA01D0600C9CA21 /* WHACK-24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WHACK-24UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9510F91DA01D0600C9CA21 /* WHACK_24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHACK_24UITests.swift; sourceTree = "<group>"; };
 		BC9510FB1DA01D0600C9CA21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9511071DA020EC00C9CA21 /* OpeningScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningScreenViewController.swift; sourceTree = "<group>"; };
+		BC95110D1DA0656F00C9CA21 /* beaconDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = beaconDict.swift; sourceTree = "<group>"; };
+		BCB507591DA142F9002B2555 /* screen_shot_2016-10-01_at_5.35.28_pm_480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "screen_shot_2016-10-01_at_5.35.28_pm_480.png"; path = "media/screen_shot_2016-10-01_at_5.35.28_pm_480.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,10 @@
 		BC9510D81DA01D0600C9CA21 /* WHACK-24 */ = {
 			isa = PBXGroup;
 			children = (
-				BC9510D91DA01D0600C9CA21 /* AppDelegate.swift */,
-				BC9510DB1DA01D0600C9CA21 /* ViewController.swift */,
+				BC95110F1DA06DFE00C9CA21 /* Supporting Files */,
 				BC9510DD1DA01D0600C9CA21 /* Main.storyboard */,
-				BC9510E01DA01D0600C9CA21 /* Assets.xcassets */,
-				BC9510E21DA01D0600C9CA21 /* LaunchScreen.storyboard */,
-				BC9510E51DA01D0600C9CA21 /* Info.plist */,
+				BC95110D1DA0656F00C9CA21 /* beaconDict.swift */,
+				BC9511071DA020EC00C9CA21 /* OpeningScreenViewController.swift */,
 			);
 			path = "WHACK-24";
 			sourceTree = "<group>";
@@ -123,6 +127,27 @@
 				BC9510FB1DA01D0600C9CA21 /* Info.plist */,
 			);
 			path = "WHACK-24UITests";
+			sourceTree = "<group>";
+		};
+		BC95110F1DA06DFE00C9CA21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC9511101DA086CB00C9CA21 /* Media */,
+				BC9510D91DA01D0600C9CA21 /* AppDelegate.swift */,
+				BC9510DB1DA01D0600C9CA21 /* ViewController.swift */,
+				BC9510E01DA01D0600C9CA21 /* Assets.xcassets */,
+				BC9510E21DA01D0600C9CA21 /* LaunchScreen.storyboard */,
+				BC9510E51DA01D0600C9CA21 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC9511101DA086CB00C9CA21 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				BCB507591DA142F9002B2555 /* screen_shot_2016-10-01_at_5.35.28_pm_480.png */,
+			);
+			name = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +218,7 @@
 				TargetAttributes = {
 					BC9510D51DA01D0600C9CA21 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RJ4N62W338;
 					};
 					BC9510E91DA01D0600C9CA21 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -230,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9510E41DA01D0600C9CA21 /* LaunchScreen.storyboard in Resources */,
+				BCB5075A1DA142F9002B2555 /* screen_shot_2016-10-01_at_5.35.28_pm_480.png in Resources */,
 				BC9510E11DA01D0600C9CA21 /* Assets.xcassets in Resources */,
 				BC9510DF1DA01D0600C9CA21 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9511081DA020EC00C9CA21 /* OpeningScreenViewController.swift in Sources */,
 				BC9510DC1DA01D0600C9CA21 /* ViewController.swift in Sources */,
 				BC9510DA1DA01D0600C9CA21 /* AppDelegate.swift in Sources */,
+				BC95110E1DA0656F00C9CA21 /* beaconDict.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WHACK-24/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CB.uc.edu.WHACK-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +444,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WHACK-24/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CB.uc.edu.WHACK-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +519,7 @@
 				BC9511001DA01D0600C9CA21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC9511011DA01D0600C9CA21 /* Build configuration list for PBXNativeTarget "WHACK-24Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +528,7 @@
 				BC9511031DA01D0600C9CA21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC9511041DA01D0600C9CA21 /* Build configuration list for PBXNativeTarget "WHACK-24UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +537,7 @@
 				BC9511061DA01D0600C9CA21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
