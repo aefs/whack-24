@@ -24,14 +24,13 @@ class OpeningSceenViewController: UIViewController, CLLocationManagerDelegate {
     
     
     var beaconManager = CLLocationManager()
-    var beaconRegion =  CLBeaconRegion()
 
     let wellesleyDict = beaconDict().wellesleyDict
-  
-  
+    var beaconRegions: [CLBeaconRegion] = []
+
     @IBOutlet weak var colorLabel: UILabel!
     
-    var closestBeacon = CLBeacon()
+    var closestBeacon: CLBeacon?
     
     @IBOutlet weak var locationLabel: UILabel!
     
@@ -45,10 +44,14 @@ class OpeningSceenViewController: UIViewController, CLLocationManagerDelegate {
     
         beaconManager.delegate = self
         
-        let uuid = NSUUID(UUIDString: "8366031D-4C67-49D2-952F-EFE8A137FA1B")
-        beaconRegion = CLBeaconRegion(proximityUUID: uuid!, identifier: "team24-2")
-      
-        
+        var uuid = NSUUID(UUIDString: "8366031D-4C67-49D2-952F-EFE8A137FA1B")
+        var beaconRegion = CLBeaconRegion(proximityUUID: uuid!, identifier: "team24-2")
+        beaconRegions.append(beaconRegion)
+
+        uuid = NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+        beaconRegion = CLBeaconRegion(proximityUUID: uuid!, identifier: "estimote")
+        beaconRegions.append(beaconRegion)
+
         beaconManager.requestAlwaysAuthorization()
         beaconManager.startMonitoringForRegion(beaconRegion)
         
@@ -57,13 +60,15 @@ class OpeningSceenViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
-    
+
     
     //viewDidAppear ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     override func viewDidAppear(animated: Bool) {
-        beaconManager.startRangingBeaconsInRegion(beaconRegion)
-        
+        for aBeaconRegion in beaconRegions {
+            beaconManager.startRangingBeaconsInRegion(aBeaconRegion)
+        }
+
         print("view did appear")
     }
     
@@ -81,12 +86,15 @@ class OpeningSceenViewController: UIViewController, CLLocationManagerDelegate {
         //determine closest beacon
         print(beacons[0])
             
-        var distanceOk = (beacons[0].proximity == CLProximity.Near) || (beacons[0].accuracy < 3)
+        let distanceOk = (beacons[0].proximity == CLProximity.Near) || (beacons[0].accuracy < 3)
             
         print(beacons[0].proximity)
         print(beacons[0].accuracy)
-        
-        if (((beacons[0].major != closestBeacon.major)||(beacons[0].minor != closestBeacon.minor))&&distanceOk){
+
+        if ((closestBeacon == nil)) {
+            closestBeacon = beacons[0]
+        }
+        if (((beacons[0].major != closestBeacon!.major)||(beacons[0].minor != closestBeacon!.minor))&&distanceOk){
             
             closestBeacon = beacons[0]
             readBeaconMessage(beacons[0])

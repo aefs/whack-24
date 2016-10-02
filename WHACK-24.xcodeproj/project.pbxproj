@@ -218,7 +218,7 @@
 				TargetAttributes = {
 					BC9510D51DA01D0600C9CA21 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = RJ4N62W338;
+						DevelopmentTeam = SGZATHMC86;
 					};
 					BC9510E91DA01D0600C9CA21 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -432,11 +432,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = SGZATHMC86;
 				INFOPLIST_FILE = "WHACK-24/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CB.uc.edu.WHACK-24";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.awkward.WHACK-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -446,11 +448,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = SGZATHMC86;
 				INFOPLIST_FILE = "WHACK-24/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CB.uc.edu.WHACK-24";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.awkward.WHACK-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

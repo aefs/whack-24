@@ -11,7 +11,7 @@ import Foundation
 
 class beaconDict{
 
-    var wellesleyDict = [
+    var wellesleyDict: [Int: [Int: [String: String]]] = [
 
         //Lulu Campus Center
         1 : [
@@ -31,11 +31,12 @@ class beaconDict{
             107: ["floor":"first floor", "location":"men's bathroom", "type":"bathroom"]
         
         ],
-//                      
-//        
-//        //Science Center
-//        2 : [
-//            101: "",
+                      
+        
+        //Science Center
+        28312 : [
+            17090: ["floor":"science center ground floor", "location":"main staircase", "type":"stair"]
+            ],
 //            102: "",
 //            103: "",
 //            201: "",
